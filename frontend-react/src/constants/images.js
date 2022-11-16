@@ -1,4 +1,4 @@
-// ich importiere alle images aus dem assets Ordner um die App.js übersichtlicher zu gestalten
+// ich importiere alle images aus dem assets Ordner um die images.js in der index.js zu exportieren. Somit muss ich in der App.js nur noch die images.js importieren und der code ist cleaner
 
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
