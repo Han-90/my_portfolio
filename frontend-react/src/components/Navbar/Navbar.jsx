@@ -6,16 +6,16 @@ import './Navbar.scss';
 const Navbar = () => {
   return (
 
-<nav>
-    <div>
+<nav className="app__navbar">
+    <div className="app__navbar-logo">
         <img src={images.logo} alt="logo"/>
         {/* erstellt das Logo in der Navbar */}
     </div>
     
-    <ul>
-      {['home','about','contact','work','skills','contact'].map((item)=>(
+    <ul className="app__navbar-links">
+      {['home','about','work','skills','contact'].map((item)=>(
         // ich erstelle ein Array mit den Navigationspunkten und steuere diese mit der .map Funktion an. Die Navpunkte werden im (item) returned
-        <li key={`link-${item}`}>
+        <li className="app__flex p-text" key={`link-${item}`}>
           {/* das list element mit dem key=value pair gibt das item wieder */}
           <div/>
           <a href={`#${item}`}>{item}</a>
