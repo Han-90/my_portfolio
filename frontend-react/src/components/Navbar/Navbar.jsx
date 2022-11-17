@@ -1,5 +1,5 @@
 import React from 'react'
-import {HiMenuAlt4, Hix} from 'react-icons/hi';
+import {HiMenuAlt4, HiX} from 'react-icons/hi';
 // https://react-icons.github.io/react-icons/icons?name=hi
 import {motion} from 'framer-motion';
 import { useState } from 'react';
@@ -8,7 +8,7 @@ import {images} from '../../constants/'
 import './Navbar.scss';
 
 const Navbar = () => {
-const [toggle, settoggle] = useState(open);
+const [toggle, setToggle] = useState(false);
 
   return (
 
@@ -31,7 +31,7 @@ const [toggle, settoggle] = useState(open);
     </ul>
 
     <div className="app__navbar-menu">
-      <HiMenuAlt4 onClick={() setToggle(false)}/>
+      <HiMenuAlt4 onClick={() => setToggle(true)}/>
 
       {
         toggle && (
@@ -41,12 +41,13 @@ const [toggle, settoggle] = useState(open);
           transition={{duration:0.85, ease:'easeOut'}}
           >
 
-            <Hix onClick={() => setToggle(false)}/>
+            <HiX onClick={() => setToggle(false)}/>
+            <ul>
             {['home','about','work','skills','contact'].map((item)=>(
         // ich erstelle ein Array mit den Navigationspunkten und steuere diese mit der .map Funktion an. Die Navpunkte werden im (item) returned
         <li key={item}>
           {/* das list element mit dem key=value pair gibt das item wieder */}
-          <a href={`#${item}`} onClick={() setToggle(false)}></a>
+          <a href={`#${item}`} onClick={()=> setToggle(false)}></a>
           {/* hier werden die items mit Hilfe des Anchortags als Link zugänglich gemacht */}
         </li>
       ))}
