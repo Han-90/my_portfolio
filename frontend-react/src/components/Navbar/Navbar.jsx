@@ -43,6 +43,7 @@ const [toggle, setToggle] = useState(false);
 
             <HiX onClick={() => setToggle(false)}/>
             <ul>
+            
             {['home','about','work','skills','contact'].map((item)=>(
         // ich erstelle ein Array mit den Navigationspunkten und steuere diese mit der .map Funktion an. Die Navpunkte werden im (item) returned
         <li key={item}>
@@ -50,8 +51,9 @@ const [toggle, setToggle] = useState(false);
           <a href={`#${item}`} onClick={()=> setToggle(false)}></a>
           {/* hier werden die items mit Hilfe des Anchortags als Link zugänglich gemacht */}
         </li>
+        
       ))}
-    </ul>
+            </ul>
             
 
           </motion.div>
