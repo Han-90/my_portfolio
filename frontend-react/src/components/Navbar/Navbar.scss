@@ -24,7 +24,7 @@
             height: 40px;
         }
     }
-    // da ich Scss nutze, kann ich das img hier nesten und stylen anstatt es neu anzulegen und zu stylen. Das spart mir zusätzliche Zeilen Code
+    // ! da ich Scss nutze, kann ich das img hier nesten und stylen anstatt es neu anzulegen und zu stylen. Das spart mir zusätzliche Zeilen Code
 }
 
 .app__navbar-links {
@@ -57,7 +57,7 @@
         }
         &:hover {
             div {
-                background: var(--secondary-color)
+                background: var(--secondary-color);
             }
         }
     }
@@ -75,7 +75,8 @@
     justify-content: center;
     align-items: center;
     background: var(--secondary-color);
-    svg {
+    svg // HiMenuAlt4
+    {
         width: 70%;
         height: 70%;
         color: var(--white-color);
@@ -93,9 +94,47 @@
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
-        background: url('../../assets/bgWhite.png');
+        background: url("../../assets/bgWhite.png");
         background-color: var(--white-color);
         background-size: cover;
         background-repeat: repeat;
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+        svg // HiX
+        {
+            width: 35px;
+            height: 35px;
+            color: var(--secondary-color);
+            margin: 0.5rem 1rem;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: column;
+            li {
+                margin: 1rem;
+                a {
+                    color: var(--gray-color);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        display: none;
     }
 }
