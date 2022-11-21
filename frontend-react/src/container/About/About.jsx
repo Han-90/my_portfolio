@@ -5,20 +5,15 @@ import './About.scss';
 
 const abouts=[
   {title:'Web Development',description:'I am a good web developer.',imgUrl: images.about01},
-  {title:'Web Design',description:'I am a good web developer.',imgUrl:images.about02},
-  {title:'UI/UX',description:'I am a good web developer.',imgUrl:images.about03},
+  {title:'Frontend Development',description:'I am a good web developer.',imgUrl:images.about02},
+  {title:'Backend Development',description:'I am a good web developer.',imgUrl:images.about03},
   {title:'Web Animations',description:'I am a good web developer.',imgUrl:images.about04}
 ]
 
 const About = () => {
   return (
     <>
-    <h2 className='head-text'>I know that
-    <span>Good Design </span>
-    <br/>
-    means
-    <span>good Business</span>
-    </h2>
+    <h2 className='head-text'>I know that <span>Good Design </span><br/>means <span>good Business</span></h2>
     <div className='app__profiles'>
       {abouts.map((about,index)=>(
         <motion.div 
