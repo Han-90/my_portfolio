@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from 'react';
 import {motion} from 'framer-motion';
-
+import {images} from '../../constants';
 import './About.scss';
 
 const abouts=[
-  {title:'Web Development',description:'I am a good web developer.',imgUrl:''},
-  {title:'Web Design',description:'I am a good web developer.',imgUrl:''},
-  {title:'UI/UX',description:'I am a good web developer.',imgUrl:''},
-  {title:'Web Animations',description:'I am a good web developer.',imgUrl:''}
+  {title:'Web Development',description:'I am a good web developer.',imgUrl: images.about01},
+  {title:'Web Design',description:'I am a good web developer.',imgUrl:images.about02},
+  {title:'UI/UX',description:'I am a good web developer.',imgUrl:images.about03},
+  {title:'Web Animations',description:'I am a good web developer.',imgUrl:images.about04}
 ]
 
 const About = () => {
